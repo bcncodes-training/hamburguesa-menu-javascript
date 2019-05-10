@@ -58,23 +58,38 @@ header{
     
 }
 
-.close div{
+.navicon.close div{
     transform: scale(0);
 }
 
-.close:before{
+.navicon.close:before{
     transform: scale(0.8) translatey(7px) rotate(135deg);
 }
 
-.close:after{
+.navicon.close:after{
     transform: scale(0.8) translatey(-14px) rotate(-135deg);
 }
 
-.open div{
+.navicon.open div{
     transform: none;
 }
 
-.navigation{
+.navigation.open{
     display:none;
 }
+
+.navigation.close{
+ display: flex;
+ flex-flow: column wrap;
+ padding:0;
+}
+
+.navigation li{
+    text-align: center;
+    padding:10px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 2px solid rgba(215,230,224,0.1);
+}
+.navigation:last-child{
+    border-bottom: none;
 }
